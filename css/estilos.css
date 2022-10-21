@@ -12,7 +12,7 @@ body {
 
 .titulo {
     font-size: 40px;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Raleway', sans-serif, cursive;
     margin-bottom: 10px;
     color: #fff;
 }
@@ -43,7 +43,7 @@ body {
 /*-------------------------*/
 
 .carousel {
-    min-height: 500px;
+    min-height: 550px;
 }
 
 .carousel .carousel-item {
@@ -57,9 +57,10 @@ body {
 }
 
 .carousel .carousel-item img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    
     top: 0;
     left: 0;
     z-index: -1;
@@ -103,12 +104,57 @@ body {
     transform: translate(-50%, -50%);
     border: 5px solid #fff;
     border-radius: 5px;
-    width: 1000px;
-    /*height: 600px;*/
-    object-fit: cover;
+    
+    object-fit: contain;
+    width: 1000;
+    height:100%;
 }
 
 
+.carousel__anterior,
+.carousel__siguiente {
+    padding: 50px;
+	position: absolute;
+	display: block;
+	width: 80px;
+	height: 80px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 80px;
+	text-align: center;
+	background: none;
+	color: rgb(135, 133, 148);
+	opacity: 20%;
+    z-index: 100;
+}
+
+.carousel .carousel__anterior:hover,
+.carousel .carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel .carousel__anterior {
+	left: -30px;
+}
+.carousel .carousel__siguiente {
+	right: -30px;
+}
+
+.carousel .carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 0;
+}
+.carousel .carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+.carousel .carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
 /*-------------------------*/
 
 
